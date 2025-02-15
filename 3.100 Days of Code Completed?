@@ -1,0 +1,8 @@
+def completed_challenge(array1, array2):
+    for i in range(100):
+        if array1[i] == 0 and array2[i] == 0:
+            return False
+    return True
+array1 = list(map(int, input().split()))
+array2 = list(map(int, input().split()))
+print(completed_challenge(array1, array2))
