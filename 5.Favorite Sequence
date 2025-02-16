@@ -1,0 +1,27 @@
+# Your code here
+def restore_sequence(t, test_cases):
+    results = []
+    
+    for case in test_cases:
+        n, arr = case
+        left, right = 0, n - 1
+        restored = []
+        
+        for i in range(n):
+            if i % 2 == 0:
+                restored.append(arr[left])
+                left += 1
+            else:
+                restored.append(arr[right])
+                right -= 1
+                
+        results.append(" ".join(map(str, restored)))
+    
+    return "\n".join(results)
+t = int(input())
+test_cases = []
+for _ in range(t):
+    n = int(input())
+    arr = list(map(int, input().split()))
+    test_cases.append((n, arr))
+print(restore_sequence(t, test_cases))
