@@ -1,4 +1,3 @@
-# Your code here
 def restore_sequence(t, test_cases):
     results = []
     
