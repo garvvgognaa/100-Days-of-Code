@@ -1,0 +1,9 @@
+def minStartValue(nums):
+    min_prefix_sum = 0
+    prefix_sum = 0
+    
+    for num in nums:
+        prefix_sum += num
+        min_prefix_sum = min(min_prefix_sum, prefix_sum)
+    
+    return 1 - min_prefix_sum if min_prefix_sum < 0 else 1
