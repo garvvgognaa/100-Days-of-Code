@@ -1,0 +1,8 @@
+def bubbleSort(seq):
+    p = len(seq)
+    while p>0:
+        for i in range(p-1):
+            if seq[i]>seq[i+1]:
+                seq[i],seq[i+1] = seq[i+1],seq[i]
+        p = p-1
+    return seq
