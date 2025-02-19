@@ -1,0 +1,19 @@
+lis = list(map(int,input().split()))
+pre = []
+def prefix_sum():
+    sum = 0
+    for i in range(len(lis)):
+        sum+=lis[i]
+        pre.append(sum)
+def solve(l,r):
+    if l==0:
+        print(pre[r])
+    else:
+        ans = pre[r] - pre[l-1]
+        print(ans)
+
+prefix_sum()
+q = int(input())
+for i in range(q):
+    l,r = map(int,input().split())
+    solve(l,r)
