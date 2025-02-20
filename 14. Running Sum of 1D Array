@@ -1,0 +1,7 @@
+def runningSum(nums):
+    n = len(nums)
+
+    pre = [0]*n
+    for i in range(n):
+        pre[i] = pre[i-1] + nums[i]
+    return pre
