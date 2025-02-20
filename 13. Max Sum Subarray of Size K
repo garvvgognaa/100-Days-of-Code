@@ -1,0 +1,12 @@
+# Your code here
+def max_subarray_sum(N, K, A):
+    window_sum = sum(A[:K])
+    max_sum = window_sum
+    for i in range(K, N):
+        window_sum += A[i] - A[i - K] 
+        max_sum = max(max_sum, window_sum) 
+
+    print(max_sum)
+N, K = map(int, input().split()
+A = list(map(int, input().split()))  
+max_subarray_sum(N, K, A)
