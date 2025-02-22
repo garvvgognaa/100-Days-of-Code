@@ -18,8 +18,6 @@ arr = list(map(int, input().split()))
 Q = int(input())
 
 queries = [tuple(map(int, input().split())) for _ in range(Q)]
-
-# Processing and outputting results
 results = count_multiples_of_5(arr, queries)
 for res in results:
     print(res)
