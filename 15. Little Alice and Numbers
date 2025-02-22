@@ -1,4 +1,3 @@
-# Your code here
 def count_multiples_of_5(arr, queries):
     N = len(arr)
     count_div5 = [0] * N
