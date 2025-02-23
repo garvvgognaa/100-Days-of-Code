@@ -1,0 +1,15 @@
+def answerQueries(nums, queries):
+    nums.sort()
+    pre_sum=[0]*len(nums)
+    for i in range(len(nums)):
+        pre_sum[i] = pre_sum[i-1] + nums[i]
+    c = []
+    for query in queries:
+        l= 0
+        for i in range(len(pre_sum)):
+            if pre_sum[i] <= query:
+                l = i + 1
+            else:
+                break
+        c.append(l)
+    return c
