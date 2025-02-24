@@ -1,0 +1,22 @@
+import math
+def canRepairInTime(ranks, cars, T):
+    total_cars = 0
+    for r in ranks:
+        total_cars += int(math.sqrt(T // r))  
+        if total_cars >= cars:  
+            return True
+    return False
+
+def repairCars(ranks, cars):
+    low, high = 1, max(ranks) * cars * cars  # Maximum time upper bound
+    ans = high
+    
+    while low <= high:
+        mid = (low + high) // 2
+        if canRepairInTime(ranks, cars, mid):
+            ans = mid  # Store the minimum time found so far
+            high = mid - 1  # Try for a smaller time
+        else:
+            low = mid + 1  # Increase time
+
+    return ans
