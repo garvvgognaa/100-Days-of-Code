@@ -1,6 +1,6 @@
 def searchMatrix(mat, target):
     if not mat or not mat[0]:
-        return False  # Edge case: Empty matrix
+        return False  
     
     n, m = len(mat), len(mat[0])
     low, high = 0, n * m - 1
