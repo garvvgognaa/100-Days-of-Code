@@ -4,8 +4,8 @@ def numOfFreq(arr, queries):
     result = []
     
     for i, j, x in queries:
-        subarray = arr[i:j+1]  # Extract subarray
-        freq = Counter(subarray)  # Count frequency
-        result.append(freq.get(x, 0))  # Get frequency of x, default 0
+        subarray = arr[i:j+1]  
+        freq = Counter(subarray) 
+        result.append(freq.get(x, 0))  
     
     return result
