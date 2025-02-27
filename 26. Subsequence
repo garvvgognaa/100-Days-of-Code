@@ -6,10 +6,6 @@ def lexicographical_subsequences(s):
         for combo in combinations(s, length):
             subsequences.append("".join(combo))
     subsequences.sort()
-    
-    # Print space-separated subsequences
     print(" ".join(subsequences))
-
-# Example usage
 s = input().strip()
 lexicographical_subsequences(s)
